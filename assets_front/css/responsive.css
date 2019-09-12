@@ -1,0 +1,52 @@
+.product .slider-single .left.slick-arrow{
+    left: 83%;
+}
+
+@media (max-width: 992px){
+    .product .slider-single .left.slick-arrow{
+        left: 78%;
+    }
+    .product .slider-single .details{
+        width: 100%;
+        padding: 0 50px 20px 50px;
+        height: auto;
+    }
+    .product .slider-single .slider-single_wrap{
+        flex-direction: column;
+    }
+    .product .slider-single img{
+        width: 100%;
+        height: auto;
+    }
+    .product .enquiry{
+        padding-left: 20px;
+    }
+    .product form{
+        padding: 10px;
+        height: auto;
+    }
+    .product form button{
+        float: none;
+    }
+}
+@media (max-width: 767px){
+    .product .slider-single .left.slick-arrow{
+        left: 70%;
+    }
+    .product .enquiry{
+        display: none;
+    }
+    .product .enquiry_mobileview{
+        display: block;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 330px){
+    .product .slider-single .left.slick-arrow{
+        left: 65%;
+    }
+    .product .slider-single .details{
+        padding: 0 30px 20px 30px;
+    }
+}

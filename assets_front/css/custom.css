@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+body {
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 100, 129, 0.8)), to(rgba(18, 45, 59, 0.8))), url(../img/bg2.jpg);
+  background: linear-gradient(rgba(41, 100, 129, 0.8), rgba(18, 45, 59, 0.8)), url(../img/bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-attachment: fixed;
+}
+
+a, a:hover, a:visited, a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header {
+  padding: 20px;
+}
+
+header i {
+  padding: 10px;
+}
+
+.timer ul {
+  background: rgba(255, 255, 255, 0.1);
+  height: 50px;
+  list-style: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.timer ul li {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.timer ul span {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.timer img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product .slider-single {
+  border-radius: 10px;
+  padding-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.product .slider-single img {
+  width: 50%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product .slider-single .slider-single_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product .slider-single .details {
+  padding: 40px 50px 0 50px;
+  width: 50%;
+  height: 250px;
+}
+
+.product .slider-single .details p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product .slider-single .details p:last-child {
+  padding-top: 60px;
+}
+
+.product .slider-single .slick-arrow {
+  position: absolute;
+  padding: 5px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  top: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product .slider-single .slick-arrow span {
+  font-size: 20px;
+}
+
+.product .slider-single .right.slick-arrow {
+  right: 7px;
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
+.product .slider-single .left.slick-arrow {
+  left: 86%;
+  z-index: 99;
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
+.product .enquiry {
+  padding-left: 50px;
+}
+
+.product .enquiry_mobileview {
+  display: none;
+}
+
+.product form {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  height: 100%;
+}
+
+.product form h6 {
+  padding: 10px;
+  font-weight: lighter;
+}
+
+.product form input[type="text"], .product form input[type="email"], .product form textarea {
+  border: none;
+  font-size: 13px;
+}
+
+.product form input::-webkit-input-placeholder, .product form textarea::-webkit-input-placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  color: black;
+}
+
+.product form input:-ms-input-placeholder, .product form textarea:-ms-input-placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  color: black;
+}
+
+.product form input::-ms-input-placeholder, .product form textarea::-ms-input-placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  color: black;
+}
+
+.product form input::placeholder, .product form textarea::placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  color: black;
+}
+
+.product form input:focus, .product form select:focus, .product form textarea:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none;
+}
+
+.product form button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 13px;
+  padding: 5px 40px;
+  float: right;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.product .slider-nav {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.product .slider-nav .item {
+  text-align: center;
+  padding: 10px;
+  outline: none;
+}
+
+.product .slider-nav h6, .product .slider-nav p {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.product .slider-nav p {
+  background: rgba(255, 255, 255, 0.2);
+  display: inline;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.product .slider-nav img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+.product .is-active {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.product .slick-arrow {
+  position: absolute;
+  top: 45%;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product .slick-arrow span {
+  font-size: 20px;
+}
+
+.product .right.slick-arrow {
+  right: 7px;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+.product .left.slick-arrow {
+  left: 7px;
+  z-index: 99;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+}
+/*# sourceMappingURL=custom.css.map */

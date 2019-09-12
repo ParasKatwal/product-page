@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+$color:(
+    primary: #122d3b //rgba(18, 45, 59, 1)
+);
+
+@function color($colorName){
+    @return map-get($map: $color, $key: $colorName )
+};
+
+body{
+    color: white;
+    box-sizing: border-box;
+    background: linear-gradient(rgba(41, 100, 129, 0.8), rgba(18, 45, 59, 0.8)), url(../img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-attachment: fixed;
+}
+a, a:hover, a:visited, a:focus{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    cursor: pointer;
+}
+a{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;  
+}
+
+// HEADER 
+header{
+    padding: 20px;
+    i{
+        padding: 10px;
+    }
+}
+
+// INDEX
+.timer{
+    ul{
+        background: rgba(255, 255, 255, 0.1);
+        height: 50px;
+        list-style: none;
+        padding: 5px 10px;
+        border-radius: 10px;
+        li{
+            display: inline-block;
+            font-size: 12px;  
+            padding: 3px;  
+        }
+        span{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    }
+    img{
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+}
+.product{
+    .slider-single{
+        border-radius: 10px;    
+        padding-top: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        img{
+            width: 50%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .slider-single_wrap{
+            display: flex;
+        }
+        .details{
+            padding: 40px 50px 0 50px;
+            width: 50%;
+            height: 250px;
+            p{
+                display: flex;
+                font-size: 14px;  
+                padding: 0;
+                margin: 0;
+                justify-content: space-between;
+            }
+            p:last-child{
+                padding-top: 60px;
+            }
+        }
+        .slick-arrow{
+            position: absolute;
+            padding: 5px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            top: 10px;
+            color: white;
+            border-radius: 5px;
+            span{
+                font-size: 20px;
+            }
+            cursor: pointer;
+        }
+        .right.slick-arrow{
+            right: 7px;
+            transform: rotateZ(360deg);
+        }
+        .left.slick-arrow{
+            left: 86%;
+            z-index: 99;
+            transform: rotateZ(360deg);
+        }
+    }
+    .enquiry{
+        padding-left: 50px;
+    }
+    .enquiry_mobileview{
+        display: none;
+    }
+    form{
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        height: 100%;
+        h6{
+            padding: 10px;
+            font-weight: lighter;
+        }
+        input[type="text"], input[type="email"], textarea{
+            border: none;
+            font-size: 13px;
+        }
+        input::placeholder, textarea::placeholder{
+            font-size: 13px;
+            opacity: 0.5;
+            color: black;
+        }
+        input:focus, select:focus, textarea:focus{
+            outline:0px !important;
+            -webkit-appearance:none;
+            box-shadow: none !important;
+            border: none;
+        }
+        button{
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 13px;
+            padding: 5px 40px;
+            float: right;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+    }
+    .slider-nav{
+        margin-top: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;    
+        .item{
+            text-align: center;
+            padding: 10px;
+            outline: none;
+        }
+        h6,p{
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+        }
+        p{
+            background: rgba(255, 255, 255, 0.2);
+            display: inline;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        img{
+            height: 100px;
+            margin: 0 auto;
+        }
+    }
+    .is-active{
+        background: rgba(255, 255, 255, 0.3);
+        outline: none;
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 45%;
+        color: white;
+        border-radius: 10px;
+        span{
+            font-size: 20px;
+        }
+        cursor: pointer;
+    }
+    .right.slick-arrow{
+        right: 7px;
+        transform: rotateZ(90deg);
+    }
+    .left.slick-arrow{
+        left: 7px;
+        z-index: 99;
+        transform: rotateZ(-90deg);
+    }
+}
