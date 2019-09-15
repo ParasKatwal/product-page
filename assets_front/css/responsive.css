@@ -19,32 +19,63 @@
         height: auto;
     }
     .product .enquiry{
-        padding-left: 20px;
+        width: 100%;
+        padding: 0;
     }
     .product form{
-        padding: 10px;
+        padding: 30px;
         height: auto;
     }
-    .product form button{
-        float: none;
+    .product .slider-single{
+        grid-column: 1/5;
+    }
+    .product .enquiry{
+        grid-column: 5/8;
+        padding-left: 30px;
     }
 }
 @media (max-width: 767px){
     .product .slider-single .left.slick-arrow{
-        left: 70%;
+        left: 78%;
+    }
+    .product .container{
+        grid-template-rows: repeat(8, minmax(2px, auto));
+    }
+    .product .slider-single{
+        grid-column: 1/8;
     }
     .product .enquiry{
-        display: none;
+        padding: 0;
+        grid-row: 7/9;
+        grid-column: 1/8;
     }
-    .product .enquiry_mobileview{
-        display: block;
+    .product .slider-nav{
+        grid-row: 4/6;
+        grid-column: 1/8;
+    }
+    .product .slick-arrow span{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 5950px){
+    .product .slider-single .left.slick-arrow{
+        left: 75%;
+    }
+    .product .enquiry{
         margin-top: 40px;
+    }
+}
+
+@media (max-width: 4650px){
+    .product .slider-single .left.slick-arrow{
+        left: 70%;
     }
 }
 
 @media (max-width: 330px){
     .product .slider-single .left.slick-arrow{
-        left: 65%;
+        left: 50%;
     }
     .product .slider-single .details{
         padding: 0 30px 20px 30px;

@@ -65,7 +65,14 @@ header{
     }
 }
 .product{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, minmax(2px, auto));
+    }
     .slider-single{
+        grid-column: 1/6;
+        grid-row: 1/3;
         border-radius: 10px;    
         padding-top: 20px;
         background: rgba(255, 255, 255, 0.1);
@@ -116,15 +123,13 @@ header{
     }
     .enquiry{
         padding-left: 50px;
-    }
-    .enquiry_mobileview{
-        display: none;
+        grid-column: 6/8;
+        grid-row: 1/3;
     }
     form{
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.1);
         padding: 10px 20px;
-        height: 100%;
         h6{
             padding: 10px;
             font-weight: lighter;
@@ -149,15 +154,20 @@ header{
             color: white;
             font-size: 13px;
             padding: 5px 40px;
-            float: right;
             font-weight: bolder;
             margin-bottom: 10px;
         }
     }
     .slider-nav{
+        grid-column: 1/8;
+        grid-row: 4/6;
         margin-top: 50px;
         background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;    
+        border-radius: 10px;
+        overflow: hidden;
+        .item_wrap{
+            justify-content: center;
+        }    
         .item{
             text-align: center;
             padding: 10px;
@@ -175,8 +185,8 @@ header{
             border-radius: 20px;
         }
         img{
-            height: 100px;
-            margin: 0 auto;
+            width: 100%;
+            object-fit: cover;
         }
     }
     .is-active{
@@ -185,20 +195,20 @@ header{
     }
     .slick-arrow{
         position: absolute;
-        top: 45%;
+        top: 40%;
         color: white;
         border-radius: 10px;
         span{
-            font-size: 20px;
+            font-size: 30px;
         }
         cursor: pointer;
     }
     .right.slick-arrow{
-        right: 7px;
+        right: 10px;
         transform: rotateZ(90deg);
     }
     .left.slick-arrow{
-        left: 7px;
+        left: 10px;
         z-index: 99;
         transform: rotateZ(-90deg);
     }

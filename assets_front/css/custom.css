@@ -61,7 +61,22 @@ header i {
      object-fit: cover;
 }
 
+.product .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -ms-grid-rows: (minmax(2px, auto))[5];
+      grid-template-rows: repeat(5, minmax(2px, auto));
+}
+
 .product .slider-single {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
   border-radius: 10px;
   padding-top: 20px;
   background: rgba(255, 255, 255, 0.1);
@@ -131,17 +146,18 @@ header i {
 
 .product .enquiry {
   padding-left: 50px;
-}
-
-.product .enquiry_mobileview {
-  display: none;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6/8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 
 .product form {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   padding: 10px 20px;
-  height: 100%;
 }
 
 .product form h6 {
@@ -191,15 +207,27 @@ header i {
   color: white;
   font-size: 13px;
   padding: 5px 40px;
-  float: right;
   font-weight: bolder;
   margin-bottom: 10px;
 }
 
 .product .slider-nav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1/8;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4/6;
   margin-top: 50px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.product .slider-nav .item_wrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product .slider-nav .item {
@@ -222,8 +250,9 @@ header i {
 }
 
 .product .slider-nav img {
-  height: 100px;
-  margin: 0 auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product .is-active {
@@ -233,24 +262,24 @@ header i {
 
 .product .slick-arrow {
   position: absolute;
-  top: 45%;
+  top: 40%;
   color: white;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .product .slick-arrow span {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .product .right.slick-arrow {
-  right: 7px;
+  right: 10px;
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
 }
 
 .product .left.slick-arrow {
-  left: 7px;
+  left: 10px;
   z-index: 99;
   -webkit-transform: rotateZ(-90deg);
           transform: rotateZ(-90deg);
